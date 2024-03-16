@@ -1,6 +1,6 @@
 matplotlib
 keras
-sklearn
+scikit-learn
 
 #installed -> matplotlib (might not be needed in the end
 #installed -> tensorflow (which installs keras...

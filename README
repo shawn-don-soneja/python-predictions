@@ -6,3 +6,7 @@ Steps:
 
 To Download & Dependencies:
 PS C:\Users\shawn\github\python-predictions> pip install -r requirements.txt
+
+Notes:
+    Needed to enabled WindowsLongPath:
+    https://www.thewindowsclub.com/how-to-enable-or-disable-win32-long-paths-in-windows-11-10
