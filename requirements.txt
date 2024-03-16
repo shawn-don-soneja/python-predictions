@@ -1,0 +1,6 @@
+matplotlib
+keras
+sklearn
+
+#installed -> matplotlib (might not be needed in the end
+#installed -> tensorflow (which installs keras...
