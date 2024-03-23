@@ -2,12 +2,27 @@ import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
+import json
+
+"""
+Removed code, for random data generation
 
 # Generate some example historical data
 # Replace this with your own historical data
 np.random.seed(42)
 X = np.arange(1, 101).reshape(-1, 1)
 y = 2 * X + np.random.normal(scale=5, size=(100, 1))
+
+"""
+
+# Retrieve Sample Data from JSON
+sample_data = open('sample_request_json.json')
+data = json.load(sample_data)
+X = data['data']['x']
+y = data['data']['y']
+
+
+# Convert all dates to DateTime before normalization? See impacts...
 
 # Stored Historical Data
 # {parameter from client request}
