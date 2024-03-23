@@ -9,9 +9,18 @@ np.random.seed(42)
 X = np.arange(1, 101).reshape(-1, 1)
 y = 2 * X + np.random.normal(scale=5, size=(100, 1))
 
+# Stored Historical Data
+# {parameter from client request}
+
+print(X)
+print(y)
+
 # Normalize the data
 X = X / np.max(X)
 y = y / np.max(y)
+
+print(X)
+print(y)
 
 # Split the data into training and testing sets
 split = int(0.8 * len(X))
@@ -45,7 +54,16 @@ model.fit(X_train_seq, y_train_seq, epochs=50, batch_size=8, verbose=1)
 # Make predictions on the test set
 y_pred = model.predict(X_test_seq)
 
+# ADD make predictions into the future
+"""
+Make sure that we train based on all historical
+
+And predict based on defined, date range extension into the future
+
+"""
+
 # Visualize the results
+# Not needed for Lambda script
 plt.plot(y_test_seq, label='Actual Data')
 plt.plot(y_pred, label='LSTM Prediction')
 plt.xlabel('Time')
