@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 import json
+from datetime import datetime
 
 """
 Removed code, for random data generation
@@ -23,6 +24,8 @@ y = data['data']['y']
 
 
 # Convert all dates to DateTime before normalization? See impacts...
+X = [datetime.strptime(xValue, '%m/%d/%Y') for xValue in X]
+
 
 # Stored Historical Data
 # {parameter from client request}
