@@ -22,11 +22,6 @@ data = json.load(sample_data)
 X = data['data']['x']
 y = data['data']['y']
 
-
-# Convert all dates to DateTime before normalization? See impacts...
-X = [datetime.strptime(xValue, '%m/%d/%Y') for xValue in X]
-
-
 # Stored Historical Data
 # {parameter from client request}
 
