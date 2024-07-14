@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 import json
-from datetime import datetime
 
 """
 Removed code, for random data generation
@@ -17,14 +16,12 @@ y = 2 * X + np.random.normal(scale=5, size=(100, 1))
 """
 
 # Retrieve Sample Data from JSON
-sample_data = open('sample_request_json.json')
-data = json.load(sample_data)
-X = data['data']['x']
-y = data['data']['y']
+with open('sample_request_json.json') as sample_data:
+    data = json.load(sample_data)
+X = np.array(data['data']['x'])
+y = np.array(data['data']['y'])
 
-# Stored Historical Data
-# {parameter from client request}
-
+# Print the data to verify
 print(X)
 print(y)
 
@@ -55,14 +52,27 @@ seq_length = 10  # Adjust this based on your data characteristics
 X_train_seq, y_train_seq = create_sequences(y_train, seq_length)
 X_test_seq, y_test_seq = create_sequences(y_test, seq_length)
 
+# Expand dimensions to make it suitable for LSTM input
+X_train_seq = np.expand_dims(X_train_seq, axis=-1)
+X_test_seq = np.expand_dims(X_test_seq, axis=-1)
+
 # Build the LSTM model
 model = Sequential()
 model.add(LSTM(50, activation='relu', input_shape=(seq_length, 1)))
 model.add(Dense(1))
 model.compile(optimizer='adam', loss='mse')
 
+# Create a TensorFlow dataset and use .repeat() to avoid the OUT_OF_RANGE error
+import tensorflow as tf
+
+train_dataset = tf.data.Dataset.from_tensor_slices((X_train_seq, y_train_seq))
+train_dataset = train_dataset.shuffle(buffer_size=1024).batch(8).repeat()
+
+# Calculate the steps per epoch
+steps_per_epoch = len(X_train_seq) // 8
+
 # Train the model
-model.fit(X_train_seq, y_train_seq, epochs=50, batch_size=8, verbose=1)
+model.fit(train_dataset, epochs=50, steps_per_epoch=steps_per_epoch, verbose=1)
 
 # Make predictions on the test set
 y_pred = model.predict(X_test_seq)
