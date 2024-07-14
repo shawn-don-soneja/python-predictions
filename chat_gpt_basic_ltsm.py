@@ -22,11 +22,12 @@ X = np.array(data['data']['x'])
 y = np.array(data['data']['y'])
 
 # Print the data to verify
+print("Data Received:")
 print(X)
 print(y)
 
 # Normalize the data
-X = X / np.max(X)
+print("Normalized Data")
 y = y / np.max(y)
 
 print(X)
