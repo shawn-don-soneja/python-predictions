@@ -3,6 +3,7 @@ https://towardsdatascience.com/step-by-step-guide-building-a-prediction-model-in
 
 Steps:
 1. pip install pandas numpy keras tensorflow
+*this command is to be run at the root level of each folder, in the /projects folder
 
 To Download & Dependencies:
 PS C:\Users\shawn\github\python-predictions> pip install -r requirements.txt
