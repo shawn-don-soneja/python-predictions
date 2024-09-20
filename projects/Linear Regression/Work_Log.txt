@@ -1,0 +1,2 @@
+9/20/24
+Creating this folder to capture python scripts for basic predictions
