@@ -3,6 +3,7 @@ import numpy as numpy
 from sklearn.linear_model import LinearRegression
 import os
 import json
+import matplotlib.pyplot as plt
 
 directory_path = "../Chat GPT__LTSM Prediction/supporting_files/sample_request_json.json"  # Replace with your directory path
 
@@ -33,6 +34,10 @@ model.fit(X, Y)
 # Make predictions
 Y_pred = model.predict(X)
 
+# Print the model parameters
+print(f"Slope (Coefficient): {model.coef_[0]}")
+print(f"Intercept: {model.intercept_}")
+
 # Plot the results
 plt.scatter(X, Y, color='blue', label='Actual data')
 plt.plot(X, Y_pred, color='red', label='Fitted line')
@@ -41,7 +46,3 @@ plt.ylabel('Y')
 plt.title('Linear Regression')
 plt.legend()
 plt.show()
-
-# Print the model parameters
-print(f"Slope (Coefficient): {model.coef_[0]}")
-print(f"Intercept: {model.intercept_}")
