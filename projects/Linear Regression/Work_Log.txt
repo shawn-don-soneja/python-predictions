@@ -1,2 +1,6 @@
+9/20/24, #2
+Successfully predicting with main.py, Linear Regression Model
+
+
 9/20/24
 Creating this folder to capture python scripts for basic predictions
