@@ -4,13 +4,8 @@ from sklearn.linear_model import LinearRegression
 import os
 import json
 
-directory_path = "../Chat GPT__LTSM Prediction/supporting_files/sample_request_json.json"  # Replace with your directory path
-
-with open(directory_path) as sample_data:
-    data = json.load(sample_data)
-
-X = numpy.array(data['data']['x'])
-Y = numpy.array(data['data']['y'])
+X = numpy.array(event['data']['x'])
+Y = numpy.array(event['data']['y'])
 
 # Print the data to verify
 print("Data Received:")
