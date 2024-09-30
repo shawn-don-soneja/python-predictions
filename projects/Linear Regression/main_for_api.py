@@ -1,26 +1,54 @@
 import pandas as pandas
 import numpy as numpy
 from sklearn.linear_model import LinearRegression
-import os
 import json
 
-X = numpy.array(event['data']['x'])
-Y = numpy.array(event['data']['y'])
+def lambda_handler(event, context):
 
-# Print the data to verify
-print("Data Received:")
-print(X)
-print(Y)
+    # Log the event for debugging
+    print(f"Received event: {json.dumps(event)}")
 
-# Create a Linear Regression model
-model = LinearRegression()
+    try:
+        X = numpy.array(event['data']['x'])
+        Y = numpy.array(event['data']['y'])
 
-# Train the model
-model.fit(X, Y)
+        # Print the data to verify
+        print("Data Received:")
+        print(X)
+        print(Y)
 
-# Make predictions
-Y_pred = model.predict(X)
+        # Create a Linear Regression model
+        model = LinearRegression()
 
-# Print the model parameters
-print(f"Slope (Coefficient): {model.coef_[0]}")
-print(f"Intercept: {model.intercept_}")
+        # Train the model
+        model.fit(X, Y)
+
+        # Make predictions
+        Y_pred = model.predict(X)
+
+        # Print the model parameters
+        print(f"Slope (Coefficient): {model.coef_[0]}")
+        print(f"Intercept: {model.intercept_}")
+
+    except Exception as e:
+            # Error Response, if exception is caught
+            response = {
+                'statusCode': 400,
+                'body': json.dumps({
+                    'predictions': [],
+                    'errors': [e]
+                })
+            }
+            
+            return response
+
+    # Success Response
+    response = {
+        'statusCode': 200,
+        'body': json.dumps({
+            'predictions': [],
+            'errors': []
+        })
+    }
+
+    return response
