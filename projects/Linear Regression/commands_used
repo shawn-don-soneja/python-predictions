@@ -1,0 +1,1 @@
+docker buildx build --platform linux/amd64 --tag 201007577959.dkr.ecr.us-east-2.amazonaws.com/my-lambda-repo:latest --push .

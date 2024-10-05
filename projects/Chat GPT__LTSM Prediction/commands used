@@ -1,3 +1,5 @@
+# For Local Execution
+
 pip3 install -U scikit-learn scipy matplotlib
 pip install numpy --upgrade --user
 
@@ -6,3 +8,8 @@ python main.py
 installed ipykernel (?)
 
 article: https://towardsdatascience.com/step-by-step-guide-building-a-prediction-model-in-python-ac441e8b9e8b
+
+_______________
+
+# For Docker Build Preparation
+
