@@ -2,7 +2,6 @@ import pandas as pandas
 import numpy as numpy
 from sklearn.linear_model import LinearRegression
 import json
-
 import logging
 
 # Set up logging
