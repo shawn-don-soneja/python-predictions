@@ -3,14 +3,26 @@ import numpy as numpy
 from sklearn.linear_model import LinearRegression
 import json
 
+import logging
+
+# Set up logging
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)  # Adjust as needed
+
 def lambda_handler(event, context):
+
+    logger.info("Executing Python Regression")
+    logger.info(event)
 
     # Log the event for debugging
     print(f"Received event: {json.dumps(event)}")
 
+    event = json.loads(event)
+    data = json.loads(event['body'])
+
     try:
-        X = numpy.array(event['data']['x'])
-        Y = numpy.array(event['data']['y'])
+        X = numpy.array(data['data']['x'])
+        Y = numpy.array(data['data']['y'])
 
         # Print the data to verify
         print("Data Received:")
@@ -36,7 +48,7 @@ def lambda_handler(event, context):
                 'statusCode': 400,
                 'body': json.dumps({
                     'predictions': [],
-                    'errors': [e]
+                    'errors': [str(e)]
                 })
             }
             
