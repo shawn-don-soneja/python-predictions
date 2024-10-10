@@ -16,7 +16,7 @@ def lambda_handler(event, context):
     # Log the event for debugging
     print(f"Received event: {json.dumps(event)}")
 
-    event = json.loads(event)
+    # event = json.loads(event)
     data = json.loads(event['body'])
 
     try:
@@ -69,3 +69,16 @@ def lambda_handler(event, context):
     }
 
     return response
+
+
+"""
+LOCAL TESTING SECTION
+
+### Remove below section from code which is sent upstream. This is for local testing...
+# Retrieve Sample Data from JSON
+with open('../Chat GPT__LTSM Prediction/supporting_files/sample_lambda_request.json') as sample_data:
+    data = json.load(sample_data)
+
+lambda_handler(data, "context")
+
+"""

@@ -1,0 +1,92 @@
+{
+    "resource": "/python-linear-regression",
+    "path": "/python-linear-regression",
+    "httpMethod": "POST",
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Content-Type": "application/json",
+        "Host": "zurt7zpp8h.execute-api.us-east-2.amazonaws.com",
+        "Postman-Token": "6153d933-be75-44cc-ad36-6bb72d8e4776",
+        "User-Agent": "PostmanRuntime/7.42.0",
+        "X-Amzn-Trace-Id": "Root=1-67074997-264a6e7b68c6a9fc5bdaa678",
+        "x-api-key": "rTpePLXtzc9xaOHlNBAAZ77f0NaaBkYrbAPoKDCe",
+        "X-Forwarded-For": "108.5.61.121",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https"
+    },
+    "multiValueHeaders": {
+        "Accept": [
+            "*/*"
+        ],
+        "Accept-Encoding": [
+            "gzip, deflate, br"
+        ],
+        "Content-Type": [
+            "application/json"
+        ],
+        "Host": [
+            "zurt7zpp8h.execute-api.us-east-2.amazonaws.com"
+        ],
+        "Postman-Token": [
+            "6153d933-be75-44cc-ad36-6bb72d8e4776"
+        ],
+        "User-Agent": [
+            "PostmanRuntime/7.42.0"
+        ],
+        "X-Amzn-Trace-Id": [
+            "Root=1-67074997-264a6e7b68c6a9fc5bdaa678"
+        ],
+        "x-api-key": [
+            "rTpePLXtzc9xaOHlNBAAZ77f0NaaBkYrbAPoKDCe"
+        ],
+        "X-Forwarded-For": [
+            "108.5.61.121"
+        ],
+        "X-Forwarded-Port": [
+            "443"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ]
+    },
+    "queryStringParameters": null,
+    "multiValueQueryStringParameters": null,
+    "pathParameters": null,
+    "stageVariables": null,
+    "requestContext": {
+        "resourceId": "gzaj14",
+        "resourcePath": "/python-linear-regression",
+        "httpMethod": "POST",
+        "extendedRequestId": "fahvsED5CYcEZqw=",
+        "requestTime": "10/Oct/2024:03:27:19 +0000",
+        "path": "/default/python-linear-regression",
+        "accountId": "201007577959",
+        "protocol": "HTTP/1.1",
+        "stage": "default",
+        "domainPrefix": "zurt7zpp8h",
+        "requestTimeEpoch": 1728530839339,
+        "requestId": "275f2fce-c312-47e7-b9c7-96fa88e61008",
+        "identity": {
+            "cognitoIdentityPoolId": null,
+            "cognitoIdentityId": null,
+            "apiKey": "rTpePLXtzc9xaOHlNBAAZ77f0NaaBkYrbAPoKDCe",
+            "principalOrgId": null,
+            "cognitoAuthenticationType": null,
+            "userArn": null,
+            "apiKeyId": "pyl7dp3ihl",
+            "userAgent": "PostmanRuntime/7.42.0",
+            "accountId": null,
+            "caller": null,
+            "sourceIp": "108.5.61.121",
+            "accessKey": null,
+            "cognitoAuthenticationProvider": null,
+            "user": null
+        },
+        "domainName": "zurt7zpp8h.execute-api.us-east-2.amazonaws.com",
+        "deploymentId": "1rl450",
+        "apiId": "zurt7zpp8h"
+    },
+    "body": "{\r\n    \"data\": {\r\n        \"x\": [\r\n            [\r\n                1\r\n            ],\r\n            [\r\n                2\r\n            ],\r\n            [\r\n                3\r\n            ],\r\n            [\r\n                4\r\n            ],\r\n            [\r\n                5\r\n            ],\r\n            [\r\n                6\r\n            ],\r\n            [\r\n                7\r\n            ],\r\n            [\r\n                8\r\n            ],\r\n            [\r\n                9\r\n            ],\r\n            [\r\n                10\r\n            ],\r\n            [\r\n                11\r\n            ],\r\n            [\r\n                12\r\n            ],\r\n            [\r\n                13\r\n            ],\r\n            [\r\n                14\r\n            ],\r\n            [\r\n                15\r\n            ],\r\n            [\r\n                16\r\n            ],\r\n            [\r\n                17\r\n            ],\r\n            [\r\n                18\r\n            ],\r\n            [\r\n                19\r\n            ],\r\n            [\r\n                20\r\n            ],\r\n            [\r\n                21\r\n            ],\r\n            [\r\n                22\r\n            ],\r\n            [\r\n                23\r\n            ],\r\n            [\r\n                24\r\n            ],\r\n            [\r\n                25\r\n            ],\r\n            [\r\n                26\r\n            ],\r\n            [\r\n                27\r\n            ],\r\n            [\r\n                28\r\n            ],\r\n            [\r\n                29\r\n            ],\r\n            [\r\n                30\r\n            ],\r\n            [\r\n                31\r\n            ],\r\n            [\r\n                32\r\n            ],\r\n            [\r\n                33\r\n            ],\r\n            [\r\n                34\r\n            ],\r\n            [\r\n                35\r\n            ],\r\n            [\r\n                36\r\n            ],\r\n            [\r\n                37\r\n            ],\r\n            [\r\n                38\r\n            ],\r\n            [\r\n                39\r\n            ],\r\n            [\r\n                40\r\n            ],\r\n            [\r\n                41\r\n            ],\r\n            [\r\n                42\r\n            ],\r\n            [\r\n                43\r\n            ],\r\n            [\r\n                44\r\n            ],\r\n            [\r\n                45\r\n            ],\r\n            [\r\n                46\r\n            ],\r\n            [\r\n                47\r\n            ],\r\n            [\r\n                48\r\n            ],\r\n            [\r\n                49\r\n            ],\r\n            [\r\n                50\r\n            ],\r\n            [\r\n                51\r\n            ],\r\n            [\r\n                52\r\n            ],\r\n            [\r\n                53\r\n            ],\r\n            [\r\n                54\r\n            ],\r\n            [\r\n                55\r\n            ],\r\n            [\r\n                56\r\n            ],\r\n            [\r\n                57\r\n            ],\r\n            [\r\n                58\r\n            ],\r\n            [\r\n                59\r\n            ],\r\n            [\r\n                60\r\n            ],\r\n            [\r\n                61\r\n            ],\r\n            [\r\n                62\r\n            ],\r\n            [\r\n                63\r\n            ],\r\n            [\r\n                64\r\n            ],\r\n            [\r\n                65\r\n            ],\r\n            [\r\n                66\r\n            ],\r\n            [\r\n                67\r\n            ],\r\n            [\r\n                68\r\n            ],\r\n            [\r\n                69\r\n            ],\r\n            [\r\n                70\r\n            ],\r\n            [\r\n                71\r\n            ],\r\n            [\r\n                72\r\n            ],\r\n            [\r\n                73\r\n            ],\r\n            [\r\n                74\r\n            ],\r\n            [\r\n                75\r\n            ],\r\n            [\r\n                76\r\n            ],\r\n            [\r\n                77\r\n            ],\r\n            [\r\n                78\r\n            ],\r\n            [\r\n                79\r\n            ],\r\n            [\r\n                80\r\n            ],\r\n            [\r\n                81\r\n            ],\r\n            [\r\n                82\r\n            ],\r\n            [\r\n                83\r\n            ],\r\n            [\r\n                84\r\n            ],\r\n            [\r\n                85\r\n            ],\r\n            [\r\n                86\r\n            ],\r\n            [\r\n                87\r\n            ],\r\n            [\r\n                88\r\n            ],\r\n            [\r\n                89\r\n            ],\r\n            [\r\n                90\r\n            ],\r\n            [\r\n                91\r\n            ],\r\n            [\r\n                92\r\n            ],\r\n            [\r\n                93\r\n            ],\r\n            [\r\n                94\r\n            ],\r\n            [\r\n                95\r\n            ],\r\n            [\r\n                96\r\n            ],\r\n            [\r\n                97\r\n            ],\r\n            [\r\n                98\r\n            ],\r\n            [\r\n                99\r\n            ],\r\n            [\r\n                100\r\n            ]\r\n        ],\r\n        \"y\": [\r\n            [\r\n                0.728\r\n            ],\r\n            [\r\n                0.911\r\n            ],\r\n            [\r\n                0.245\r\n            ],\r\n            [\r\n                0.767\r\n            ],\r\n            [\r\n                0.543\r\n            ],\r\n            [\r\n                0.678\r\n            ],\r\n            [\r\n                0.456\r\n            ],\r\n            [\r\n                0.234\r\n            ],\r\n            [\r\n                0.654\r\n            ],\r\n            [\r\n                0.321\r\n            ],\r\n            [\r\n                0.789\r\n            ],\r\n            [\r\n                0.567\r\n            ],\r\n            [\r\n                0.345\r\n            ],\r\n            [\r\n                0.890\r\n            ],\r\n            [\r\n                0.456\r\n            ],\r\n            [\r\n                0.123\r\n            ],\r\n            [\r\n                0.801\r\n            ],\r\n            [\r\n                1.002\r\n            ],\r\n            [\r\n                0.269\r\n            ],\r\n            [\r\n                0.843\r\n            ],\r\n            [\r\n                0.597\r\n            ],\r\n            [\r\n                0.746\r\n            ],\r\n            [\r\n                0.502\r\n            ],\r\n            [\r\n                0.257\r\n            ],\r\n            [\r\n                0.719\r\n            ],\r\n            [\r\n                0.353\r\n            ],\r\n            [\r\n                0.868\r\n            ],\r\n            [\r\n                0.624\r\n            ],\r\n            [\r\n                0.380\r\n            ],\r\n            [\r\n                0.979\r\n            ],\r\n            [\r\n                0.502\r\n            ],\r\n            [\r\n                0.135\r\n            ],\r\n            [\r\n                0.728\r\n            ],\r\n            [\r\n                0.911\r\n            ],\r\n            [\r\n                0.245\r\n            ],\r\n            [\r\n                0.767\r\n            ],\r\n            [\r\n                0.543\r\n            ],\r\n            [\r\n                0.678\r\n            ],\r\n            [\r\n                0.456\r\n            ],\r\n            [\r\n                0.234\r\n            ],\r\n            [\r\n                0.654\r\n            ],\r\n            [\r\n                0.321\r\n            ],\r\n            [\r\n                0.789\r\n            ],\r\n            [\r\n                0.567\r\n            ],\r\n            [\r\n                0.345\r\n            ],\r\n            [\r\n                0.890\r\n            ],\r\n            [\r\n                0.456\r\n            ],\r\n            [\r\n                0.123\r\n            ],\r\n            [\r\n                0.801\r\n            ],\r\n            [\r\n                1.002\r\n            ],\r\n            [\r\n                0.269\r\n            ],\r\n            [\r\n                0.843\r\n            ],\r\n            [\r\n                0.597\r\n            ],\r\n            [\r\n                0.746\r\n            ],\r\n            [\r\n                0.502\r\n            ],\r\n            [\r\n                0.257\r\n            ],\r\n            [\r\n                0.719\r\n            ],\r\n            [\r\n                0.353\r\n            ],\r\n            [\r\n                0.868\r\n            ],\r\n            [\r\n                0.624\r\n            ],\r\n            [\r\n                0.380\r\n            ],\r\n            [\r\n                0.979\r\n            ],\r\n            [\r\n                0.502\r\n            ],\r\n            [\r\n                0.135\r\n            ],\r\n            [\r\n                0.728\r\n            ],\r\n            [\r\n                0.911\r\n            ],\r\n            [\r\n                0.245\r\n            ],\r\n            [\r\n                0.767\r\n            ],\r\n            [\r\n                0.543\r\n            ],\r\n            [\r\n                0.678\r\n            ],\r\n            [\r\n                0.456\r\n            ],\r\n            [\r\n                0.234\r\n            ],\r\n            [\r\n                0.654\r\n            ],\r\n            [\r\n                0.321\r\n            ],\r\n            [\r\n                0.789\r\n            ],\r\n            [\r\n                0.567\r\n            ],\r\n            [\r\n                0.345\r\n            ],\r\n            [\r\n                0.890\r\n            ],\r\n            [\r\n                0.456\r\n            ],\r\n            [\r\n                0.123\r\n            ],\r\n            [\r\n                0.801\r\n            ],\r\n            [\r\n                1.002\r\n            ],\r\n            [\r\n                0.269\r\n            ],\r\n            [\r\n                0.843\r\n            ],\r\n            [\r\n                0.597\r\n            ],\r\n            [\r\n                0.746\r\n            ],\r\n            [\r\n                0.502\r\n            ],\r\n            [\r\n                0.257\r\n            ],\r\n            [\r\n                0.719\r\n            ],\r\n            [\r\n                0.353\r\n            ],\r\n            [\r\n                0.868\r\n            ],\r\n            [\r\n                0.624\r\n            ],\r\n            [\r\n                0.380\r\n            ],\r\n            [\r\n                0.979\r\n            ],\r\n            [\r\n                0.502\r\n            ],\r\n            [\r\n                0.135\r\n            ],\r\n            [\r\n                0.380\r\n            ],\r\n            [\r\n                0.979\r\n            ],\r\n            [\r\n                0.502\r\n            ],\r\n            [\r\n                0.135\r\n            ]\r\n        ]\r\n    }\r\n}",
+    "isBase64Encoded": false
+}
