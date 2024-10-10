@@ -41,6 +41,9 @@ def lambda_handler(event, context):
         print(f"Slope (Coefficient): {model.coef_[0]}")
         print(f"Intercept: {model.intercept_}")
 
+        logger.info("Slope")
+        logger.info(model.coef_[0])
+
     except Exception as e:
             # Error Response, if exception is caught
             response = {
@@ -51,6 +54,9 @@ def lambda_handler(event, context):
                 })
             }
             
+            logger.info("Error")
+            logger.info(str(e)  )
+
             return response
 
     # Success Response
